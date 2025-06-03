@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Escape Room - Hallway</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="game-screen">
+  <div id="game-container">
+
+    <!-- Background -->
+    <img id="background" src="assets/rooms/hallway.png" alt="Hallway Background" />
+
+    <!-- Left Arrow (back to classroom) -->
+    <img id="arrow-left" class="nav-arrow" src="assets/ui/arrow-left.png" alt="Back to Classroom" title="Back to Classroom" />
+
+    <!-- Right Arrow (next hallway segment) -->
+    <img id="arrow-right" class="nav-arrow" src="assets/ui/arrow-right.png" alt="Go Right" title="Go Right" />
+
+    <!-- Lockers -->
+    <div id="lockers-container">
+      <!-- Lockers will be inserted dynamically -->
+    </div>
+
+    <!-- Locker Popup -->
+    <div id="locker-popup" class="hidden">
+      <h3 id="locker-hint"></h3>
+      <input id="locker-code-input" maxlength="3" placeholder="Enter code" />
+      <button id="locker-code-submit">Unlock Locker</button>
+      <div id="locker-message"></div>
+      <button id="locker-close">Close</button>
+    </div>
+
+  </div>
+
+  <script src="js/hallway.js"></script>
+</body>
+</html>

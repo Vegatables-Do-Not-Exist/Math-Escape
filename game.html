@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Escape Room - Classroom</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="game-screen">
+  <div id="game-container">
+
+    <!-- Background -->
+    <img id="background" src="assets/rooms/classroom.png" alt="Classroom Background" />
+
+    <!-- Teacher sprite -->
+    <img id="teacher" src="assets/ui/teacher-sleeping.png" alt="Sleeping Teacher" title="Sleeping Teacher" />
+
+    <!-- Animated Z's -->
+    <div id="sleeping-zs">Z Z Z</div>
+
+    <!-- Sticky Note -->
+    <img id="sticky-note" src="assets/ui/sticky-note.png" alt="Sticky Note" title="Sticky Note" />
+
+    <!-- Closet Door -->
+    <img id="closet-door" src="assets/ui/closet-door.png" alt="Closet Door" title="Closet Door" />
+
+    <!-- Math Problem Panel -->
+    <div id="math-problem-panel">
+      <h3>Solve this to open the closet:</h3>
+      <div id="math-problem"></div>
+      <input id="closet-code-input" maxlength="3" placeholder="Enter code" />
+      <button id="closet-code-submit">Open Closet</button>
+      <div id="closet-message"></div>
+    </div>
+
+  </div>
+
+  <script src="js/engine.js"></script>
+</body>
+</html>
