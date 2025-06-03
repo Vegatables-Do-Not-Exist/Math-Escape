@@ -1,0 +1,291 @@
+/* ===== Classroom / Game Screen ===== */
+
+.game-screen {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Courier New', monospace;
+  background-color: #222;
+}
+
+#game-container {
+  position: relative;
+  width: 960px;   /* scaled up from 320 */
+  height: 540px;  /* scaled up from 180 */
+  margin: 20px auto;
+  border: 3px solid #fff;
+  background-color: #000;
+}
+
+#game-container img {
+  position: absolute;
+  user-select: none;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#teacher {
+  width: 200px;
+  bottom: 70px;
+  left: 60px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+#sleeping-zs {
+  position: absolute;
+  top: 70px;
+  left: 150px;
+  font-size: 40px;
+  color: #88f;
+  font-weight: bold;
+  animation: floatZ 3s infinite;
+  z-index: 6;
+  user-select: none;
+  pointer-events: none;
+}
+
+@keyframes floatZ {
+  0% {opacity: 0.3; transform: translateY(0);}
+  50% {opacity: 1; transform: translateY(-20px);}
+  100% {opacity: 0.3; transform: translateY(0);}
+}
+
+#sticky-note {
+  width: 80px;
+  top: 400px;
+  left: 850px;
+  z-index: 5;
+  cursor: pointer;
+  display: none; /* initially hidden */
+}
+
+#closet-door {
+  width: 120px;
+  bottom: 30px;
+  left: 350px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+#math-problem-panel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 280px;
+  background: rgba(0,0,0,0.75);
+  padding: 15px;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  font-family: monospace;
+  z-index: 10;
+}
+
+#closet-code-input {
+  width: 80px;
+  font-size: 18px;
+  padding: 5px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+#closet-code-submit {
+  background-color: #2f9fd7;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#closet-message {
+  margin-top: 8px;
+  height: 20px;
+}
+
+/* Add other global styles or room styles here as needed */
+.nav-arrow {
+  position: absolute;
+  width: 60px;
+  top: 240px;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+}
+
+#arrow-left {
+  left: 10px;
+}
+
+#arrow-right {
+  right: 10px;
+}
+
+#lockers-container {
+  position: absolute;
+  bottom: 60px;
+  left: 150px;
+  width: 660px;
+  height: 180px;
+  display: flex;
+  justify-content: space-around;
+  z-index: 5;
+}
+
+.locker {
+  width: 100px;
+  height: 160px;
+  background-image: url('../assets/ui/locker.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: relative;
+}
+
+.locker.open {
+  background-image: url('../assets/ui/locker-open.png');
+  cursor: default;
+}
+
+#locker-popup {
+  position: absolute;
+  top: 100px;
+  left: 350px;
+  width: 260px;
+  background: rgba(0,0,0,0.85);
+  border: 2px solid white;
+  padding: 15px;
+  color: white;
+  font-family: monospace;
+  z-index: 20;
+}
+
+.hidden {
+  display: none;
+}
+
+#locker-code-input {
+  width: 80px;
+  font-size: 18px;
+  padding: 5px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+#locker-code-submit {
+  background-color: #2f9fd7;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+#locker-message {
+  margin-top: 8px;
+  height: 20px;
+}
+
+#locker-close {
+  background-color: #555;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  float: right;
+}
+#doors-container {
+  position: absolute;
+  bottom: 100px;
+  left: 180px;
+  width: 640px;
+  display: flex;
+  justify-content: space-around;
+  z-index: 5;
+}
+
+.door {
+  width: 150px;
+  height: 280px;
+  background-color: #654321;
+  border: 4px solid #3a1f00;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: inset 0 0 10px #422a00;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.door:hover {
+  background-color: #7a5023;
+}
+
+.door-nameplate {
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  text-align: center;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  color: #eee;
+  text-shadow: 1px 1px 2px #000;
+}
+#mrclock {
+  position: absolute;
+  bottom: 70px;
+  left: 300px;
+  width: 180px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 6;
+}
+
+#dialogue-box {
+  position: absolute;
+  bottom: 20px;
+  left: 120px;
+  width: 600px;
+  background: rgba(0,0,0,0.85);
+  border: 2px solid white;
+  padding: 15px;
+  color: white;
+  font-family: monospace;
+  font-size: 18px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#dialogue-text {
+  flex-grow: 1;
+  margin-right: 15px;
+}
+
+#dialogue-next {
+  background-color: #2f9fd7;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  user-select: none;
+}
+#coffee-pot {
+  position: absolute;
+  bottom: 80px;
+  left: 450px;
+  width: 100px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 6;
+}
